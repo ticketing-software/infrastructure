@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: next-client
+spec:
+  selector:
+    matchLabels:
+      app: next-client
+  template:
+    metadata:
+      labels:
+        app: next-client
+    spec:
+      containers:
+        - name: next-client
+          image: varma1909/next-client
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"
+          # ports:
+          # - containerPort: <Port>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: next-client
+spec:
+  selector:
+    app: next-client
+  ports:
+    - port: 3000
+      targetPort: 3000
