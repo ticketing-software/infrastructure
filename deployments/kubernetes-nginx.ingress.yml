@@ -8,10 +8,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
-  tls:
-    - hosts:
-        - achyuthvarma.com
-      secretName: myapp-secret-tls
+  # tls:
+  #   - hosts:
+  #       - achyuthvarma.com
+  #     secretName: myapp-secret-tls
   rules:
     - host: achyuthvarma.com
       http:
