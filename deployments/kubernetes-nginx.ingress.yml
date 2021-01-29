@@ -7,13 +7,13 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/use-regex: "true"
-    # cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
   # Adding tls
-  # tls:
-  #   - hosts:
-  #       - achyuthvarma.com
-  #     secretName: ticketing-tls
+  tls:
+    - hosts:
+        - achyuthvarma.com
+      secretName: ticketing-tls
   rules:
     - host: achyuthvarma.com
       http:
