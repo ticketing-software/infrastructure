@@ -8,7 +8,7 @@ spec:
     # The ACME server URL
     server: https://acme-staging-v02.api.letsencrypt.org/directory
 
-    email: achyuth.varma1@gmail.com
+    email: achyuth.varma1@outlook.com
 
     privateKeySecretRef:
       name: letsencrypt-staging
