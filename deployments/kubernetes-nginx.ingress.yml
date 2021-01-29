@@ -9,6 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
+  # Adding tls
   tls:
     - hosts:
         - achyuthvarma.com
