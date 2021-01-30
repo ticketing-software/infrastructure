@@ -27,17 +27,17 @@ jobs:
 
       - name: Changing the directory to Deployments
         run: | 
-         pwd
          cd ./deployments
+         pwd
          
-#       - name: Logging into Azure CLI 
-#         uses: azure/login@v1
-#         with:
-#           creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Logging into Azure CLI 
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       
-#       - name: Accessing Kubernetes Cluster 
-#         run: |
-#           az aks get-credentials --resource-group New-Ticketing-Application --name ticketing-kubernetes-cluster
+      - name: Accessing Kubernetes Cluster 
+        run: |
+          az aks get-credentials --resource-group New-Ticketing-Application --name ticketing-kubernetes-cluster
       
-#       - name: Applying all the yaml files
-#         run: kubectl apply -f .   
+      - name: Applying all the yaml files
+        run: kubectl apply -f .   
