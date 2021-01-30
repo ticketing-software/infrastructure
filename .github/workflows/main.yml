@@ -27,7 +27,7 @@ jobs:
 
       - name: Changing the directory to Deployments
         run: | 
-         cd ./Deployments
+         cd ./infrastructure/deployments
          pwd
          
       - name: Logging into Azure CLI 
