@@ -28,6 +28,7 @@ jobs:
       - name: Changing the directory to Deployments
         run: | 
          pwd
+         cd ./deployments
          
 #       - name: Logging into Azure CLI 
 #         uses: azure/login@v1
