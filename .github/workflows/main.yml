@@ -41,4 +41,4 @@ jobs:
           az aks get-credentials --resource-group New-Ticketing-Application --name ticketing-kubernetes-cluster
 
       - name: Applying all the yaml files
-        run: kubectl apply -f infrastructure/deployments
+        run: kubectl apply -f ./deployments
