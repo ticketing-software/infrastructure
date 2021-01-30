@@ -25,11 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Changing the directory to Deployments
-        run: |
-          cd ./deployments
-          pwd
-          ls
+      # - name: Changing the directory to Deployments
+      #   run: |
+      #     cd ./deployments
+      #     pwd
+      #     ls
 
       - name: Logging into Azure CLI
         uses: azure/login@v1
@@ -41,4 +41,4 @@ jobs:
           az aks get-credentials --resource-group New-Ticketing-Application --name ticketing-kubernetes-cluster
 
       - name: Applying all the yaml files
-        run: kubectl apply -f ./
+        run: kubectl apply -f infrastructure/deployments
