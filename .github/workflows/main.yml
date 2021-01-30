@@ -29,6 +29,7 @@ jobs:
         run: | 
          cd ./deployments
          pwd
+         ls
          
       - name: Logging into Azure CLI 
         uses: azure/login@v1
