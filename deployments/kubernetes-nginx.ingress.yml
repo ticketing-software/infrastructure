@@ -18,7 +18,11 @@ spec:
     - host: achyuthvarma.com
       http:
         paths:
-          - path: "/"
+          - path: /
             backend:
               serviceName: next-client-service
               servicePort: 3000
+          - path: /api/users/?(.*)
+            backend:
+              serviceName: auth-service
+              servicePort: 3001
