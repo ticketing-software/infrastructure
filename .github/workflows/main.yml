@@ -38,7 +38,7 @@ jobs:
 
       - name: Accessing Kubernetes Cluster
         run: |
-          az aks get-credentials --resource-group New-Ticketing-Application --name ticketing-kubernetes-cluster
+          az aks get-credentials --resource-group Ticketing_Software --name Kubernetes_Cluster
 
       - name: Applying all the yaml files
         run: kubectl apply -f ./deployments
