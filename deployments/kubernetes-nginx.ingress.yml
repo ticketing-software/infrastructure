@@ -35,4 +35,4 @@ spec:
           - path: /kubernetes
             backend:
               serviceName: kubernetes-dashboard/kubernetes-dashboard.svc.cluster.local
-              servicePort: 443
+              servicePort: 32323
