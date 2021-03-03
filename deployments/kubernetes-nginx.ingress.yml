@@ -26,3 +26,8 @@ spec:
             backend:
               serviceName: auth-service
               servicePort: 3001
+
+          - path: /api/ticket/?(.*)
+            backend:
+              serviceName: ticketing-service
+              servicePort: 3002

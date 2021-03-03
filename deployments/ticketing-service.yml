@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ticketing-service-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ticketing-service-deployment
+  template:
+    metadata:
+      labels:
+        app: ticketing-service-deployment
+    spec:
+      containers:
+        - name: ticketing-service
+          image: varma1909/ticketing-ticket-service:latest
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"
+          # ports:
+          # - containerPort: <Port>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ticketing-service
+spec:
+  selector:
+    app: ticketing-service-deployment
+  ports:
+    - port: 3002
+      targetPort: 3002
