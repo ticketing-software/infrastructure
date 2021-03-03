@@ -18,10 +18,6 @@ spec:
     - host: achyuthvarma.com
       http:
         paths:
-          - path: /
-            backend:
-              serviceName: next-client-service
-              servicePort: 3000
           - path: /api/users/?(.*)
             backend:
               serviceName: auth-service
@@ -32,7 +28,12 @@ spec:
               serviceName: ticketing-service
               servicePort: 3002
 
-          - path: /kubernetes
+          - path: /kubernetes/?(.*)
             backend:
               serviceName: kubernetes-dashboard/kubernetes-dashboard.svc.cluster.local
               servicePort: 32323
+
+          - path: /
+            backend:
+              serviceName: next-client-service
+              servicePort: 3000
