@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/use-regex: "true"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   # Adding tls
   tls:
@@ -19,6 +19,11 @@ spec:
     - host: achyuthvarma.com
       http:
         paths:
+          - path: /
+            backend:
+              serviceName: next-client-service
+              servicePort: 3000
+
           - path: /api/users/?(.*)
             backend:
               serviceName: auth-service
@@ -29,12 +34,7 @@ spec:
               serviceName: ticketing-service
               servicePort: 3002
 
-          - path: /kubernetes/?(.*)
-            backend:
-              serviceName: kubernetes-dashboard
-              servicePort: 443
-
-          - path: /
-            backend:
-              serviceName: next-client-service
-              servicePort: 3000
+          # - path: /kubernetes/?(.*)
+          #   backend:
+          #     serviceName: kubernetes-dashboard
+          #     servicePort: 443
