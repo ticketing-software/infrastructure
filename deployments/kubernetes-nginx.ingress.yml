@@ -31,3 +31,8 @@ spec:
             backend:
               serviceName: ticketing-service
               servicePort: 3002
+
+          - path: /kubernetes
+            backend:
+              serviceName: kubernetes-dashboard/kubernetes-dashboard.svc.cluster.local
+              servicePort: 443
