@@ -34,10 +34,10 @@ spec:
               serviceName: ticketing-service
               servicePort: 3002
 
-          - path: /nats/?(.*)
-            backend:
-              serviceName: nats-srv
-              servicePort: 4222
+          # - path: /nats/?(.*)
+          #   backend:
+          #     serviceName: nats-srv
+          #     servicePort: 4222
 
           # - path: /kubernetes/?(.*)
           #   backend:
