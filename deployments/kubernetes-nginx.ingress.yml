@@ -34,7 +34,7 @@ spec:
               serviceName: ticketing-service
               servicePort: 3002
 
-          - path: /nats/?(.*)
+          - path: /streaming/?(.*)
             backend:
               serviceName: nats-srv
               servicePort: 8222
