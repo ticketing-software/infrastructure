@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nats-depl
+  name: nats
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nats-depl
+      app: nats
   template:
     metadata:
       labels:
-        app: nats-depl
+        app: nats
     spec:
       containers:
         - name: nats
@@ -40,7 +40,7 @@ metadata:
   name: nats-srv
 spec:
   selector:
-    app: nats-depl
+    app: nats
   ports:
     - name: client
       protocol: TCP
