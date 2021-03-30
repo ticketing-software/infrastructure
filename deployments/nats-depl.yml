@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nats
+      app: nats-depl
   template:
     metadata:
       labels:
-        app: nats
+        app: nats-depl
     spec:
       containers:
         - name: nats
@@ -40,7 +40,7 @@ metadata:
   name: nats-srv
 spec:
   selector:
-    app: nats
+    app: nats-depl
   ports:
     - name: client
       protocol: TCP
