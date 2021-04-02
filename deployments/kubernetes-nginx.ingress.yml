@@ -22,7 +22,7 @@ spec:
           - path: /
             backend:
               serviceName: next-client-service
-              servicePort: 80
+              servicePort: 3000
 
           - path: /api/users/?(.*)
             backend:
