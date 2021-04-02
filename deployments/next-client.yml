@@ -29,9 +29,9 @@ spec:
   selector:
     app: next-client
   ports:
-    - name: dev_port
+    - name: dev-port
       port: 3000
       targetPort: 3000
-    - name: deployed_port
+    - name: deployed-port
       port: 80
       targetPort: 80
