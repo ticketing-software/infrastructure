@@ -13,10 +13,10 @@ spec:
   # Adding tls
   tls:
     - hosts:
-        - achyuthvarma.com
+        - the-ticketing-app-producton.xyz
       secretName: ticketing-tls
   rules:
-    - host: achyuthvarma.com
+    - host: the-ticketing-app-producton.xyz
       http:
         paths:
           - path: /
